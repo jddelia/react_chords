@@ -17,9 +17,8 @@ class App extends Component {
 
   componentDidMount() {
     //create a synth and connect it to the master output (your speakers)
-    var synth = new Tone.Synth().toMaster()
+    var synth = new Tone.Synth().toMaster();
 
-    //play a middle 'C' for the duration of an 8th note
     synth.triggerAttackRelease('A4', '8n', .87);
     synth.triggerAttackRelease('A#4', '8n', 1);
     synth.triggerAttackRelease('B4', '8n', 1.13);
@@ -36,10 +35,9 @@ class App extends Component {
 
   handleClick(note) {
     //create a synth and connect it to the master output (your speakers)
-    var synth = new Tone.Synth().toMaster()
+    var synth = new Tone.Synth().toMaster();
 
-    //play a middle 'C' for the duration of an 8th note
-    synth.triggerAttackRelease(note, '8n')
+    synth.triggerAttackRelease(note, '8n');
   }
 
   handleNoteChange(note, index) {
